@@ -17,6 +17,8 @@ import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { FireDataServiceProvider } from '../providers/fire-data-service/fire-data-service';
+import { RestaurentPage } from '../pages/restaurent/restaurent';
 
 
 var config = {
@@ -37,7 +39,8 @@ var config = {
     HomePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    RestaurentPage
   ],
   imports: [
     BrowserModule,
@@ -55,13 +58,15 @@ var config = {
     HomePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    RestaurentPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
+    FireDataServiceProvider,
   ]
 })
 export class AppModule {}

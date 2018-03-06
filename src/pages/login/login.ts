@@ -4,6 +4,7 @@ import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { TabsPage } from '../tabs/tabs';
+import { RestaurentPage } from '../restaurent/restaurent';
 /**
  * Generated class for the LoginPage page.
  *
@@ -44,7 +45,7 @@ export class LoginPage {
       console.log("authService replied with")
       if (this.authService.isLoggedIn) {
         // naar home gaan, if auth succes
-        this.navCtrl.setRoot(TabsPage)
+        this.navCtrl.setRoot(RestaurentPage)
         //this.menuCtrl.enable(true);
       }
     })

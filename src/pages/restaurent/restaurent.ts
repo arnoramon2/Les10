@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FireDataServiceProvider } from '../../providers/fire-data-service/fire-data-service';
 
 /**
  * Generated class for the RestaurentPage page.
@@ -15,11 +16,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RestaurentPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  stores:any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private db: FireDataServiceProvider
+) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RestaurentPage');
+    this.stores=this.db.getAll();
+
+    this.stores.subscribe((result) => {
+      console.log("got thos data from provider", result);
+    },(error)=> {
+      console.log("Didn't get any data", error);
+    });
   }
+
 
 }
