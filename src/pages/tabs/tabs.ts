@@ -28,8 +28,12 @@ export class TabsPage {
     this.events.subscribe("tabsNavigatieToAbout", (pizza) => {
       //this.navCtrl.push(AboutPage));
 
-      console.log("tabs navigaite event", pizza)
-      this.tabs.select(1);
+      console.log("tabs navigatie event", pizza)
+      this.tabs.select(1).then(() => {
+        this.events.publish("AddPizzaToCart", pizza);
+      })
+
+      
     });
   }
 }

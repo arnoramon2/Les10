@@ -17,8 +17,10 @@ export class AboutPage {
   }
 
   ionViewDidLoad() {
-    console.log('IonViewDidLoad tabsPage');
-      this.events.subscribe("tabsNavigatieToAbout", (pizza) => {
+    console.log('IonViewDidLoad aboutpage');
+
+
+      this.events.subscribe("AddPizzaToCart", (pizza) => {
         this.pizzas.push(pizza);
 
         console.log("Currently in cart", this.pizzas);
