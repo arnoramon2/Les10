@@ -11,4 +11,9 @@ export class HomePage {
 
   }
 
+  about(){
+    //Navigeren naar een tab
+    this.navCtrl.parent.select(1);
+  }
+
 }

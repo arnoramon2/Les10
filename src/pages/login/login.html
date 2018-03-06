@@ -22,14 +22,14 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>password</ion-label>
+      <ion-label floating>password</ion-label>
       <ion-input [(ngModel)]="user.password" type="password"></ion-input>
     </ion-item>
 
   </ion-list>
 
 
-  <button ion-button full color="danger" (click)=home()>Log in</button>
+  <button ion-button full color="danger" (click)=login()>Log in</button>
 
   <div text-center>
     <button ion-button full color="light" (click)=register()>Or create an account</button>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { TabsPage } from '../tabs/tabs';
 /**
  * Generated class for the LoginPage page.
  *
@@ -37,14 +38,14 @@ export class LoginPage {
     this.navCtrl.push(RegisterPage);
   }
 
-  home() {
+  login() {
     console.log('Tried to login');
-    this.authService.login(this.user.email, this.user.password).then((result) => {
-      console.log("authService replied with",result)
+    this.authService.login(this.user.email, this.user.password).then(() => {
+      console.log("authService replied with")
       if (this.authService.isLoggedIn) {
         // naar home gaan, if auth succes
-        this.navCtrl.setRoot(HomePage)
-        this.menuCtrl.enable(true);
+        this.navCtrl.setRoot(TabsPage)
+        //this.menuCtrl.enable(true);
       }
     })
   }
