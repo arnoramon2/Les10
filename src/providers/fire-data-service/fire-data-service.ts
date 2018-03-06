@@ -25,7 +25,7 @@ export class FireDataServiceProvider {
 
 
   // ****  UPDATE DATABASE ****
-  //update(id:string, store:any) {
-  //  this.db.object("stores/" + id).update(store);
-  //}
+  update(id:string, store:any) {
+    this.db.object("stores/" + id).update(store);
+  }
 }
