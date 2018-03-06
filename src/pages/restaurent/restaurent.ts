@@ -35,10 +35,12 @@ export class RestaurentPage {
       console.log("Didn't get any data", error);
     });
 
-    let store={
-      name: "New pizza store 2.1"
-    }
-    this.db.update("0", store);
+
+    // ****  UPDATE DATABASE ****
+    //let store={
+    //  name: "New pizza store 2.1"
+    // }
+    //this.db.update("0", store);
   }
 
 
