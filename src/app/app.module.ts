@@ -20,6 +20,9 @@ import { RegisterPage } from '../pages/register/register';
 import { FireDataServiceProvider } from '../providers/fire-data-service/fire-data-service';
 import { RestaurentPage } from '../pages/restaurent/restaurent';
 
+import { Camera } from '@ionic-native/camera';
+import { CameraPage } from '../pages/camera/camera';
+
 
 var config = {
   apiKey: "AIzaSyCG5IV5tEE66gr2nq5WalM9pD7_g7Nfcb0",
@@ -40,7 +43,8 @@ var config = {
     TabsPage,
     LoginPage,
     RegisterPage,
-    RestaurentPage
+    RestaurentPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,8 @@ var config = {
     TabsPage,
     LoginPage,
     RegisterPage,
-    RestaurentPage
+    RestaurentPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
@@ -67,6 +72,7 @@ var config = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     FireDataServiceProvider,
+    Camera
   ]
 })
 export class AppModule {}

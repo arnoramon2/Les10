@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FireDataServiceProvider } from '../../providers/fire-data-service/fire-data-service';
+import { CameraPage } from '../camera/camera';
 
 /**
  * Generated class for the RestaurentPage page.
@@ -36,6 +37,7 @@ export class RestaurentPage {
     });
 
 
+
     // ****  UPDATE DATABASE ****
     //let store={
     //  name: "New pizza store 2.1"
@@ -43,5 +45,10 @@ export class RestaurentPage {
     //this.db.update("0", store);
   }
 
+
+  image(){
+    this.navCtrl.setRoot(CameraPage);
+    console.log("homo");
+  }
 
 }
