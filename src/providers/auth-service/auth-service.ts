@@ -7,6 +7,7 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class AuthServiceProvider {
   isLoggedIn: boolean = false;
+  isRegistered: boolean = false;
   constructor(
     public afAuth: AngularFireAuth,
     public toastCtrl: ToastController
@@ -39,7 +40,8 @@ displayError(error:any, message: string){
 
   register(email: string, password: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password).then((result) => {
-        console.log("regsiter result", result);
+        console.log("Register result", result);
+        this.isRegistered = true
       })
       .catch((error) => {
         this.displayError(error, "error during register");
