@@ -41,9 +41,9 @@ export class LoginPage {
 
   login() {
     console.log('Tried to login');
-    this.authService.login(this.user.email, this.user.password).then(() => {
-      console.log("authService replied with")
-      if (this.authService.isLoggedIn) {
+   // this.authService.login(this.user.email, this.user.password).then(() => {
+     // console.log("authService replied with")
+      //if (this.authService.isLoggedIn) {
         // naar home gaan, if auth succes
         this.navCtrl.setRoot(RestaurentPage)
         //this.menuCtrl.enable(true);

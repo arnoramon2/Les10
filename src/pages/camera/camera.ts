@@ -43,9 +43,6 @@ export class CameraPage {
       // If it's base64:
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.avatarData = base64Image;
-
-      
-      this.db.update
      }, (err) => {
       // Handle error
      });
